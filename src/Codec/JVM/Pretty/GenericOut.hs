@@ -36,6 +36,9 @@ word16 x = text (show x)
 word32 :: Word32 -> Doc
 word32 x = text (show x)
 
+word64 :: Word64 -> Doc
+word64 x = text (show x)
+
 int8 :: Int8 -> Doc
 int8 x = text (show x)
 
@@ -49,21 +52,19 @@ int64 :: Int64 -> Doc
 int64 x = text (show x)
 
 instance Out Word8 where
-  docPrec n x
-      | n/=0 && x<0 = parens $ word8 x
-      | otherwise = word8 x
+  docPrec n x = word8 x
   doc = docPrec 0  
 
 instance Out Word16 where
-  docPrec n x
-      | n/=0 && x<0 = parens $ word16 x
-      | otherwise = word16 x
+  docPrec n x = word16 x
   doc = docPrec 0  
 
 instance Out Word32 where
-  docPrec n x
-      | n/=0 && x<0 = parens $ word32 x
-      | otherwise = word32 x
+  docPrec n x = word32 x
+  doc = docPrec 0  
+
+instance Out Word64 where
+  docPrec n x = word64 x
   doc = docPrec 0  
 
 instance Out Int8 where
