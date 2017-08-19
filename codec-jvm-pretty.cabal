@@ -17,8 +17,8 @@ extra-source-files:  ChangeLog.md, README.md
 cabal-version:       >=1.10
 
 library
-  -- exposed-modules:     
-  -- other-modules:       
+   exposed-modules:     Codec.JVM.Pretty
+   other-modules:       Codec.JVM.Pretty.GenericOut
   -- other-extensions:    
   build-depends:       base >=4.9 && <4.10, codec-jvm>=0.1,GenericPretty>=1.2.1,containers>=0.5.7.1,
                        text >=1.2.2.1,pretty>=1.1.3.3,bytestring>=0.8.3

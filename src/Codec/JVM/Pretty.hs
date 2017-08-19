@@ -2,7 +2,9 @@
 {-# LANGUAGE UndecidableInstances #-}
 {-# LANGUAGE StandaloneDeriving , CPP#-}
 {-# LANGUAGE DeriveGeneric, DeriveAnyClass #-}
-module Codec.JVM.PrettyPrint where
+module Codec.JVM.Pretty 
+    (module Text.PrettyPrint.GenericPretty)
+    where
 
 import Codec.JVM
 import Codec.JVM.ASM.Code.Instr
