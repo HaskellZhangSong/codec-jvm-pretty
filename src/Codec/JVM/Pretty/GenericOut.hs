@@ -102,6 +102,6 @@ text' :: Text -> Doc
 text' x = text (show x)
 
 instance Out Text where
-  docPrec n x = parens $ text' x
+  docPrec n x = text' x
   doc = docPrec 0  
 
