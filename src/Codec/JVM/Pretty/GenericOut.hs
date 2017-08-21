@@ -95,7 +95,7 @@ bytestring :: ByteString -> Doc
 bytestring x= text (show x)
 
 instance Out ByteString where
-  docPrec n x = parens $ bytestring x
+  docPrec n x = bytestring x
   doc = docPrec 0
 
 text' :: Text -> Doc
